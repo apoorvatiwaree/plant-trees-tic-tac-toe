@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+#intro {
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    color: #0a8610;
+}
+#main-body {
+    width: auto;
+    height: 550px;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#app {
+    border: 1px solid rgb(235, 118, 118);
+    width: 500px;
+    height: 500px;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: rgb(248, 224, 173);
+}
+
+.header > * {
+    color: rgb(138, 12, 33);
+}
+
+.header__turn {
+    padding: 12px;
+}
+
+.header__status {
+    padding: 12px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header__restart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.board {
+    display: grid;
+    background: green;
+    gap: 10px;
+    padding: 10px;
+    flex-grow: 1;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+}
+
+.board__tile {
+    background-image: url("img/land.jpg");
+    background-color: #d8a868;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    font-family: cursive;
+    color: #f5f1f1;
+}
+
+.board__tile:hover {
+    background-color: #0a8610;
+}
+
+.board__tile--winner {
+    color: green;
+}
